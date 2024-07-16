@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+body{
+    font-family:'Open Sans', sans-serif;
+    height:100vh;
+}
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    text-decoration:none;
+}
+nav{
+    height:80px;
+    background:white;
+}
+nav img{
+    width:200px;
+    position:absolute;
+    top:8px;
+    left:5%;
+}
+nav ul{
+    float:right;
+    margin-right:25px;
+}
+nav ul li{
+    display:inline-block;
+    line-height:80px;
+    margin:0 25px;
+}
+nav ul li a{
+    position:relative;
+    color:black;
+    font-size:18px;
+    padding:5px 0;
+    font-weight:bold;
+}
+nav ul li a::before{
+    position:absolute;
+    content:'';
+    left:0;
+    bottom:0;
+    height:3px;
+    width:100%;
+    background:black;
+    transform:scaleX(0);
+    transform-origin:right;
+    transition: transform .4s linear;
+}
+nav ul li a:hover:before{
+    transform:scaleX(1);
+    transform-origin:left;
+}
+
+/*REPORT AND ISSUE*/
+.REPORTANISSUE{
+    height:80vh;
+    background:linear-gradient(to right top,goldenrod, #FFD500, yellow, #FFD500, goldenrod);
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+.section-title h1{
+    text-align:center;
+    justify-content:center;
+    font-size:2rem;
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration:underline;
+    font-weight:bold;
+    margin:20px;
+    padding:30px;
+}
+.REPORTANISSUE .row{
+    margin:40px 0 90px;
+    justify-content:space-between;
+    text-align:center;
+}
+.REPORTANISSUE .row .col{
+    padding:0 10px;
+}
+.REPORTANISSUE form input{
+    width:50%;
+    height:30px;
+    margin-bottom:20px;
+    padding:0 15px;
+    outline:none;
+    border:rgba(128, 128, 128, 0.6);
+    background-color:rgba(128, 128, 128, 0.6);
+}
+.REPORTANISSUE form input::placeholder{
+    color:black;
+}
+.REPORTANISSUE form button{
+    padding:10px 65px;
+    border-radius:6px;
+    font-size:18px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    cursor:pointer;
+    background-color:rgba(128, 128, 128, 0.6);
+    transition:0.2s;
+}
+.REPORTANISSUE form button:hover{
+    background:rgba(128, 128, 128, 0.8);
+}
+
+/*CONTACT US*/
+.contactus{
+    background-color:goldenrod;
+    padding-top:80px;
+}
+.contactus .section-title p{
+    text-align:center;
+    justify-content:center;
+    font-size:2rem;
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration:underline;
+    font-weight:bold;
+}
+.contact-details .location{
+    text-align:center;
+    justify-content:center;
+}
+.location p{
+    text-align:center;
+    position:relative;
+    color:black;
+    font-size:18px;
+    padding:15px 0;
+    font-weight:bold;
+}

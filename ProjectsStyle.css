@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+body{
+    font-family:'Open Sans', sans-serif;
+    height:100vh;
+}
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    text-decoration:none;
+}
+nav{
+    height:80px;
+    background:white;
+}
+nav img{
+    width:200px;
+    position:absolute;
+    top:8px;
+    left:5%;
+}
+nav ul{
+    float:right;
+    margin-right:25px;
+}
+nav ul li{
+    display:inline-block;
+    line-height:80px;
+    margin:0 25px;
+}
+nav ul li a{
+    position:relative;
+    color:black;
+    font-size:18px;
+    padding:5px 0;
+    font-weight:bold;
+}
+nav ul li a::before{
+    position:absolute;
+    content:'';
+    left:0;
+    bottom:0;
+    height:3px;
+    width:100%;
+    background:black;
+    transform:scaleX(0);
+    transform-origin:right;
+    transition: transform .4s linear;
+}
+nav ul li a:hover:before{
+    transform:scaleX(1);
+    transform-origin:left;
+}
+
+/*PROJECT PAGE*/
+.PROJECTS{
+    height:100vh;
+    width:100%;
+    background:url(Images/Construction.jpg);
+    background-position:center;
+    background-size:cover;
+}
+section{
+    padding-top:80px;
+}
+.section-title{
+    text-align:center;
+}
+.PROJECTS .section-title p{
+    color:black;
+    font-size:48px;
+    font-family:sans-serif;
+    font-style:italic;
+    font-weight:bold;
+    background-color:rgba(250, 250, 250, 0.8);
+    background-blend-mode:overlay;
+    padding:30px 20px;
+    border-radius:5px;
+    width:45%;
+    margin-top:270px;
+    margin-left:70px;
+}
+
+/*ZAMBIAN PROJECTS*/
+.zaminformation{
+    background:white;
+}
+.zaminformation h1{
+    font-size:2rem;
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration:underline;
+}
+.zaminformation h3{
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1.5rem;
+    font-weight:bold;
+    text-decoration:underline;
+    margin:0 40px;
+}
+.zaminformation p{
+    margin:20px 60px;
+    margin-top:5px;
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+    padding:8px 0;
+}
+/*ZAMBIAN PROJECTS IMAGES*/
+.zam{
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    background:linear-gradient(to left top,goldenrod, #FFD500, yellow, #FFD500, goldenrod);
+    overflow:hidden;
+}
+.zam .content{
+    z-index:888;
+    color:white;
+    margin-top:50px;
+    display:none;
+}
+.zam .content.active{
+    display:block;
+}
+.zam .content h2{
+    width:80%;
+    font-size:3em;
+    font-weight:bold;
+    letter-spacing:2px;
+    line-height:75px;
+    margin-bottom:20px;
+    margin:0 65px;
+}
+.zam .content p{
+    width:60%;
+    margin-bottom:65px;
+}
+
+.zam img{
+    z-index:000;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+}
+/*SLIDER-NAVIGATION*/
+.slider-navigation{
+    z-index:888;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transform:translateY(80px);
+    margin-bottom:12px;
+}
+.slider-navigation .nav-btn{
+    width:12px;
+    height:12px;
+    background:goldenrod;
+    border:2px solid black;
+    border-radius:50%;
+    cursor:pointer;
+    box-shadow:0 0 2px rgba(218, 165, 32, 0.5);
+    transition:0.3s ease;
+}
+.slider-navigation .nav-btn.active{
+    background:white;
+}
+.slider-navigation .nav-btn:not(:last-child){
+    margin-right:20px;
+}
+.slider-navigation .nav-btn:hover{
+    transform:scale(1.3);
+}
+/*IMAGE SLIDE*/
+.image-slide{
+    position:absolute;
+    width:100%;
+    clip-path: inset(5% 100% 5% 3%);
+}
+.image-slide.active{
+    clip-path: inset(5% 3% 5% 3%);
+    transition:1.3s ease;
+    transition-property:clip-path;
+}
+/*ZAM2 PROJECTS*/
+.zam2{
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    background:linear-gradient(to left top,goldenrod, #FFD500, yellow, #FFD500, goldenrod);
+    overflow:hidden;
+}
+.zam2 .content1{
+    z-index:888;
+    color:white;
+    margin-top:50px;
+    display:none;
+}
+.zam2 .content1.active{
+    display:block;
+}
+.zam2 .content1 h2{
+    width:80%;
+    font-size:3em;
+    font-weight:bold;
+    letter-spacing:2px;
+    line-height:75px;
+    margin-bottom:20px;
+    margin:0 65px;
+}
+.zam2 .content1 p{
+    width:60%;
+    margin-bottom:65px;
+}
+.zam2 img{
+    z-index:000;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+}
+
+/*SLIDER-NAVIGATION1*/
+.slider-navigation1{
+    z-index:888;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transform:translateY(80px);
+    margin-bottom:12px;
+}
+.slider-navigation1 .nav-btn1{
+    width:12px;
+    height:12px;
+    background:goldenrod;
+    border:2px solid black;
+    border-radius:50%;
+    cursor:pointer;
+    box-shadow:0 0 2px rgba(218, 165, 32, 0.5);
+    transition:0.3s ease;
+}
+.slider-navigation1 .nav-btn1.active{
+    background:white;
+}
+.slider-navigation1 .nav-btn1:not(:last-child){
+    margin-right:20px;
+}
+.slider-navigation1 .nav-btn1:hover{
+    transform:scale(1.3);
+}
+
+/*IMAGE SLIDE1*/
+.image-slide1{
+    position:absolute;
+    width:100%;
+    clip-path: inset(5% 100% 5% 3%);
+}
+.image-slide1.active{
+    clip-path: inset(5% 3% 5% 3%);
+    transition:1.3s ease;
+    transition-property:clip-path; 
+}
+
+/*CONTACT US*/
+.contactus{
+    background-color:goldenrod;
+}
+p{
+    padding:15px;
+    font-weight:bold;
+}

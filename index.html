@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" type="image/png" href="/Images/logo (1).png" title="EVEN AMI CIVIL ENGGINERING LTD">
+    <title>EVEN AMI CIVIL ENGINEERING LTD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--NAVIGATION BAR START-->
+    <nav>
+        <a href="index.html" target="_self"><img src="/Images/logo (1).png" alt="Company Logo"></a>
+        <ul>
+            <li><a href="index.html" target="_self">HOME PAGE</a></li>
+            <li><a href="#About Us" target="_self">ABOUT US</a></li>
+            <li><a href="#Services" target="_self">SERVICES</a></li>
+            <li><a href="projects.html" target="_self">PROJECTS</a></li>
+            <li><a href="ReportAnIssue.html" target="_self">REPORT AN ISSUE</a></li>
+        </ul>
+    </nav>
+    <!--NAVIGATION BAR END-->
+
+    <!--IMAGE SLIDE START-->
+    <div class="movingimages">
+        <img class="image-slide active" src="/Images/EVEN1.jpg">
+        <img class="image-slide" src="/Images/EVEN19.jpg">
+        <img class="image-slide" src="/Images/EVEN21.JPG">
+        <img class="image-slide" src="/Images/EVEN20.jpg">
+        <img class="image-slide" src="/Images/KALA.png">
+        <img class="image-slide" src="/Images/EVEN23.jpg">
+        <img class="image-slide" src="/Images/EVEN16.JPG">
+        <img class="image-slide" src="/Images/EVEN18.png">
+        <img class="image-slide" src="/Images/EVEN9.jpg">
+        <img class="image-slide" src="/Images/EVEN5.jpg">
+
+        <div class="content active">
+            <h1>OUR SERVICES</h1>
+            <p>PERFECTING THE WORLD WE LIVE IN</p>
+        </div>
+        <div class="content">
+            <h1>COOPER MINE PROJECT</h1>
+            <p>PERFECTING THE WORLD WE LIVE IN</p>
+        </div>
+        <div class="content">
+            <h1>COOPER MINE PROJECT</h1>
+            <p>PERFECTING THE WORLD WE LIVE IN</p>
+        </div>
+        <div class="content">
+            <h1>ZYNK MINE PROJECT</h1>
+            <p>PERFECTING THE WORLD WE LIVE IN</p>
+        </div>
+        <div class="content">
+            <h1>KALA PROJECT</h1>
+            <p>PERFECTING THE WORLD WE LIVE IN</p>
+        </div>
+        <div class="content">
+            <h1>OUR SERVICES</h1>
+            <p>PERFECTING THE WORLD WE LIVE IN</p>
+        </div>
+        <div class="content">
+            <h1>LUFWANYAMA PROJECT</h1>
+            <p>PERFECTING THE WORLD WE LIVE IN</p>
+        </div>
+        <div class="content">
+            <h1>KITWE DISTRICT HOSPITAL PROJECT</h1>
+            <p>PERFECTING THE WORLD WE LIVE IN</p>
+        </div>
+        <div class="content">
+            <h1>MARLEX MINE PROJECT</h1>
+            <p>PERFECTING THE WORLD WE LIVE IN</p>
+        </div>
+        <div class="content">
+            <h1>KASUMBALESA PROJECT</h1>
+            <p>PERFECTING THE WORLD WE LIVE IN</p>
+        </div>
+
+        <div class="slider-navigation">
+            <div class="navbtn active"></div>
+            <div class="navbtn"></div>
+            <div class="navbtn"></div>
+            <div class="navbtn"></div>
+            <div class="navbtn"></div>
+            <div class="navbtn"></div>
+            <div class="navbtn"></div>
+            <div class="navbtn"></div>
+            <div class="navbtn"></div>
+            <div class="navbtn"></div>
+        </div>
+        
+    </div>
+    <!--IMAGE SLIDE END-->
+
+    <!--JAVASCRIPT START-->
+    <script type="text/javascript">
+
+        //javascript for image slider
+        const btns = document.querySelectorAll(".navbtn");
+        const slides = document.querySelectorAll(".image-slide");
+        const contents = document.querySelectorAll(".content");
+
+        //AUTOPLAY SLIDER
+
+        var repeat =  function(activeClass){
+            let active = document.getElementsByClassName('active');
+            let i = 1;
+
+            var repeater = () => {
+                setTimeout(function(){
+                    [...active].forEach((activeSlide) => {
+                        activeSlide.classList.remove('active');
+                    });
+
+                    btns[i].classList.add('active');
+                    slides[i].classList.add('active');
+                    contents[i].classList.add('active');
+                    i++;
+
+                    if(slides.length == i){
+                        i = 0;
+                    }
+                    if(i >= slides.length){
+                        return;
+                    }
+                    repeater();
+                }, 5000);
+            }
+            repeater();
+        }
+        repeat();
+
+    </script>
+    <!--JAVASCRIPT END-->
+
+    <!-- ABOUT US START-->
+    <section class="ABOUTUS" id="ABOUTUS">
+        <div class="container">
+            <div class="section-title">
+                <h1 id="About Us">ABOUT US</h1>
+                <p class="TEXT">Even Ami Civil Engineering Ltd was established in Zambia in 2017 as a subsidiary of Even Ami Civil Engineering Ltd from Israel. Even Ami is in the infrastructure and heavy construction hiring business with hedquarter in Jerusalem and a branch in the heart of the copprbelt in the city of Kitwe.</p>
+                <p class="TEXT">Even Ami has everything necessary to carry out and lead successfully any project, of any type and of any scope. The company's vast expertise and her long-standing relationships constitute the solid foundation that enables the execution of work at the highest level.</p>
+                <p class="TEXT">Since the company established it has carried out numerous projects within the infrastructure, earthmoving, agriculture and the mining fields.</p>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT US END-->
+
+    <!--INFO START-->
+    <section class="INFO" id="INFO">
+        <div class="container">
+            <div class="section-title">
+                <h1>OUR VALUES</h1>
+            </div>
+            <ul class="ourvision flex">
+                <li class="vision">
+                    <h2>OUR VISION:</h2>
+                    <p>Our vision is to be positive contributors in the development of the world “perfecting the world we live in” as is our instruction from the Almighty God.</p>
+                    <p>It is our priority to be clients preferred partner in their quest to build and achieve any of their construction goals.</p>
+                    <p>We work as a team and as a family with our employees encouraging growth and personal development thereby maintaining and attracting a skilled and motivated staff.</p>
+                    <br>
+                    <h2>OUR MISSION:</h2>
+                    <p>We are committed and dedicated to developing Even Ami into a diverse construction company in Zambia, SADC region and world at large.</p>
+                    <p>Having established ourselves as a company in Israel with us undertaking and successfully completing numerous projects since our establishment in 1996, as shown in our completed projects, we as a company have set out to bring the same zeal and determination to all SADC regions, we are set to complete numerous projects in the next decade.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--INFO END-->
+
+    <!-- SERVICES START-->
+    <section class="SERVICES" id="SERVICES">
+        <div class="container">
+            <div class="section-title">
+                <h1 id="Services">SERVICES</h1>
+            </div>
+            <ul class="pics flex">
+                <li class="pic">
+                    <h2>MININGS</h2>
+                    <img src="/Images/EVEN4.jpg" alt="serviceImg">
+                    <p>Mining Contracts</p>
+                    <p>Access Roads</p>
+                    <p>Roads Rehabilitation</p>
+                    <p>Load and Haul</p>
+                    <p>Exploration and Mineral Exposure</p>
+                </li>
+                <li class="pic">
+                    <h2>INFRASTRUCTURE</h2>
+                    <img src="/Images/EVEN3.jpg" alt="serviceImg">
+                    <h2>& DEVELOPMENT</h2>
+                    <p>Road Works</p>
+                    <p>Infrastructure Development</p>
+                    <p>Foundation</p>
+                    <p>Backfilling and Compaction</p>
+                </li>
+                <li class="pic">
+                    <h2>AGRICULTURE</h2>
+                    <img src="/Images/EVEN1.jpg" alt="serviceImg">
+                    <p>Water Reservoir</p>
+                    <p>Bush Clearing</p>
+                    <p>Dum Construction</p>
+                    <p>Turn Key Projects</p>
+                </li>
+                <li class="pic">
+                    <h2>CIVIL ENGINEERING</h2>
+                    <img src="/Images/EVEN19.jpg" alt="serviceImg">
+                    <p>Road Construction</p>
+                    <p>Construction</p>
+                    <p>Earth Moving Projects</p>
+                    <p>Heavy machinery Hiring</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- SERVICES END-->
+
+    <!--CONTACT US START-->
+    <section class="contactus" id="contactus">
+        <div class="container">
+            <div class="section-title">
+                <h1>CONTACT US</h1>
+            </div>
+        </div>
+
+        <div class="row flex">
+            <div class="contact information">
+                <div class="contact-details">
+                    <div class="location">
+                        <p><img src="/Images/envelope.svg" height="18px" width="20px">zambia@evenami.com</p>
+                        <p><img src="/Images/phone.svg" height="18px" width="20px">+260 760 581518</p>
+                        <p><img src="/Images/location.svg" height="18px" width="20px">Plot 848 Chimwemwe, along Chingola Road, Kitwe, ZAMBIA</p>
+                        <p><img src="/Images/location.svg" height="18px" width="20px">La Belva Court, 417 Chindu Road, Kabulonga, Lusaka, ZAMBIA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--CONTACT US END-->
+
+</body>
+</html>
+
